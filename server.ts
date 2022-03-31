@@ -9,7 +9,7 @@ import model from './model';
 const PORT = process.env.PORT || 3000;
 
 const router = new Router<Record<string, never>, Context>();
-router.use('/api', apiRoute.routes(), apiRoute.allowedMethods());
+router.use('', apiRoute.routes(), apiRoute.allowedMethods());
 const app = new Koa();
 app.use(bodyParser());
 app.use(router.routes()).use(router.allowedMethods());
